@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'routes_screen.dart';
 import 'profile_screen.dart';
 import 'book_screen.dart';
-import 'map_screen.dart'; // <-- import mapy
+import 'map_screen.dart'; 
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({super.key});
@@ -14,7 +14,6 @@ class MenuScreen extends StatefulWidget {
 class _MenuScreenState extends State<MenuScreen> {
   int _currentIndex = 0;
 
-  // TABY - mapa jako pierwszy element
   final List<Widget> _screens = [
     const MapScreen(),
     const RoutesScreen(),
@@ -40,7 +39,6 @@ class _MenuScreenState extends State<MenuScreen> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: _onTabTapped,
-        // kolejność: Mapa - Trasy - Rezerwacje - Profil
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.map),
